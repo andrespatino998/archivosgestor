@@ -1,0 +1,138 @@
+
+<?php 
+
+session_start();
+
+
+
+
+require '../Controllers/FotoPerfil.php';
+
+
+
+if(!isset($_SESSION["id"]))
+    header('location:../index.php');
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Gestor | Archivos</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="../Util/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+
+        <link rel="icon" href="../Util/Img/icono.ico">
+
+     
+    <!-- Custom styles for this template-->
+    <link href="../Util/Css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../Util/Css/fotoperfil3.css" rel="stylesheet">
+ 
+    <link href="../Util/Css/sweetalert2.min.css" rel="stylesheet">
+    <link href="../Util/Css/toastr.min.css" rel="stylesheet">
+
+    
+</head>
+
+<body id="page-top">
+    
+    <!-- Page Wrapper -->
+<div id="wrapper">
+
+        <!-- Sidebar -->
+        <?php 
+
+            require_once 'Layouts/sidebar.php'
+
+            ?>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+        <div id="content">
+
+                <!-- Topbar -->
+                <?php 
+
+            require_once 'Layouts/topbar.php'
+
+            ?>
+
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        
+                            <div class="row">
+                                <div class="container" style="text-align:left;">
+                                    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-folder-plus"></i> Carpetas</a>
+                                    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-file-upload"></i> Archivo</a>
+                                </div>
+                            </div>
+                    </div>
+                    
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card mb-4 py-2 border-bottom-info">
+                                    <div class="card-body">
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+        </div>
+            <!-- End of Main Content -->
+
+            <?php 
+
+            require_once 'Layouts/footer.php'
+
+            ?>
+            <!-- End of Footer -->
+
+     </div>
+        <!-- End of Content Wrapper -->
+
+</div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <?php 
+
+require_once 'Layouts/librerias.php'
+
+?>
+
+
+<script src="../Views/Layouts/fotoperfil.js"></script>
+
+</body>
+
+</html>
